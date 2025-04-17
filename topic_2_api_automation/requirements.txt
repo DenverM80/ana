@@ -1,5 +1,13 @@
 faker
-names
 pytest
 pytest-html
 requests
+sphinx
+
+## conda equivalents
+# conda install conda-forge::faker
+# conda install anaconda::pytest
+# conda install conda-forge::pytest-html
+# conda install anaconda::requests
+# conda install sphinx
+# conda install conda-forge::sphinx-autodoc-typehints

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>tests_test_users module &#8212; ana  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="models_models module" href="models.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="tests-test-users-module">
+<h1>tests_test_users module<a class="headerlink" href="#tests-test-users-module" title="Link to this heading">¶</a></h1>
+<p id="module-tests.test_users">Using wrapper functions from placeholder, perform CRUD tests for users</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.test_users.</span></span><span class="sig-name descname"><span class="pre">TestUsers</span></span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_create_100_users">
+<span class="sig-name descname"><span class="pre">test_create_100_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_create_100_users"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_create_100_users" title="Link to this definition">¶</a></dt>
+<dd><p>Longer running test for DB performance
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:type random_user: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>
+:param random_user: fixture which provides a valid random values for a new user
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>with_session</strong> (<em>Session</em>)</p></li>
+<li><p><strong>random_user</strong> (<em>dict</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_create_user">
+<span class="sig-name descname"><span class="pre">test_create_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_create_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_create_user" title="Link to this definition">¶</a></dt>
+<dd><p>Test POST /users with a JSON dict payload returns status_code 201
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:type random_user: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>
+:param random_user: fixture which provides a valid random values for a new user
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>with_session</strong> (<em>Session</em>)</p></li>
+<li><p><strong>random_user</strong> (<em>dict</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_crud_user">
+<span class="sig-name descname"><span class="pre">test_crud_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_crud_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_crud_user" title="Link to this definition">¶</a></dt>
+<dd><p>E2E test to create, update, and delete a user
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:type random_user: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>
+:param random_user: fixture which provides a valid random values for a new user
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>with_session</strong> (<em>Session</em>)</p></li>
+<li><p><strong>random_user</strong> (<em>dict</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_delete_unknown_user">
+<span class="sig-name descname"><span class="pre">test_delete_unknown_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_user</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_delete_unknown_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_delete_unknown_user" title="Link to this definition">¶</a></dt>
+<dd><p>Test to attempt to delete a non-existent user fails gracefully with status_code 404
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:type random_user: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></span>
+:param random_user: fixture which provides a valid random values for a new user
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>with_session</strong> (<em>Session</em>)</p></li>
+<li><p><strong>random_user</strong> (<em>dict</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_get_all_users">
+<span class="sig-name descname"><span class="pre">test_get_all_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_get_all_users"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_get_all_users" title="Link to this definition">¶</a></dt>
+<dd><p>Test GET /users returns status_code 200
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>with_session</strong> (<em>Session</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_get_unknown_user">
+<span class="sig-name descname"><span class="pre">test_get_unknown_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_get_unknown_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_get_unknown_user" title="Link to this definition">¶</a></dt>
+<dd><p>Test unknown user with id 42 at /users/42 returns 404 gracefully
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>with_session</strong> (<em>Session</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.test_users.TestUsers.test_get_user_by_id">
+<span class="sig-name descname"><span class="pre">test_get_user_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_session</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_users.html#TestUsers.test_get_user_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_users.TestUsers.test_get_user_by_id" title="Link to this definition">¶</a></dt>
+<dd><p>Test GET /users/1 returns status_code 200
+:type with_session: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code></span>
+:param with_session: fixture that provides a persistent requests.Session
+:return:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>with_session</strong> (<em>Session</em>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ana</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="user_actions.html">actions_user_actions module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">models_models module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tests_test_users module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tests.test_users.TestUsers"><code class="docutils literal notranslate"><span class="pre">TestUsers</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="models.html" title="previous chapter">models_models module</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Denver Miller.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/tests.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
